@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_1rc45ud" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.4.1">
+  <decision id="dish" name="Dish">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Season">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>season</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0w660rv" label="How many guests">
+        <inputExpression id="LiteralExpression_1te8whk" typeRef="integer">
+          <text>guestCount</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Dish" typeRef="string" />
+      <rule id="DecisionRule_1rx5qko">
+        <inputEntry id="UnaryTests_0jha91b">
+          <text>"Fall"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ugi8s">
+          <text>&lt;= 8</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i9mmu9">
+          <text>"Spareribs"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xeljo1">
+        <inputEntry id="UnaryTests_0xz75mi">
+          <text>"Fall"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c6icwm">
+          <text>&gt; 8</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xgxcr8">
+          <text>"No food"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>

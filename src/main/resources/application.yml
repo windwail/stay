@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB}
+    username: ${USER}
+    password: ${PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        type: trace
+
+
+camunda:
+  bpm:
+    eventing:
+      execution: true
+      history: true
+      task: true
